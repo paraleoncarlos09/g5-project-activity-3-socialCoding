@@ -26,7 +26,7 @@ print(color1 + back2 + '\033[1m' + "                                            
 
 while True:
     #User input for the location & destination and validation of inputs.
-    orig = input(color2 + '\033[1m' + "\nStarting Location: " + '\033[0m')                                       #Fix: Should not accept integer or numeric input
+    orig = input(color2 + '\033[1m' + "\nStarting Location: " + '\033[0m')                #Fix: Should not accept integer or numeric input
     if orig == "quit" or orig == "q":                                                                   #Bold Text: '\033[0m'
         print((color3 + '\033[1m' + "\nProgram Terminated" + '\033[0m') )
         break
