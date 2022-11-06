@@ -44,7 +44,7 @@ while True:
         if json_status == 0:
             print("API Status: " + str(json_status) + " = A successful route call.\n")
             #Origin information
-            print("===============================================================================") 
+            print("================================================================================")
             print()
             print(color3 + '\033[1m' + (orig) + " Information                                                              " + '\033[0m')
             print("Country: " + '\033[1m' + (json_data["route"]["locations"][0]["adminArea1"]) + '\033[0m')                                 #fix error: list indices must be intergers or slices, not str
@@ -60,7 +60,7 @@ while True:
             print("Type: " + '\033[1m' + (json_data["route"]["locations"][1]["geocodeQuality"]) + '\033[0m')                         #[1] - destination
             print("Geo Quality Code: " + '\033[1m' + (json_data["route"]["locations"][1]["geocodeQualityCode"]) + '\033[0m')
             print()
-            print("===============================================================================")
+            print("================================================================================")
             print()
             
             #Printing of the directions from the origin to the destination
@@ -82,7 +82,7 @@ while True:
             #print("Fuel Used (Ltr): " +
             #    str("{:.2f}".format((json_data["route"]["fuelUsed"])*3.78)))
         
-            print("===============================================================================")
+            print("================================================================================")
             print()
             
             for each in json_data["route"]["legs"][0]["maneuvers"]:
@@ -90,7 +90,7 @@ while True:
                     str("{:.2f}".format((each["distance"])*1.61) + " km)"))
             #Other miscellaneous information about travel
             print()
-            print("===============================================================================")
+            print("================================================================================")
             print()
             print('\033[1;3m' + color3 + "Other Miscellaneous Information:\n" + '\033[0m')
             print("Will I encounter any toll road? " + '\033[1m' + color4 + str(json_data["route"]["hasTollRoad"]) + '\033[0m')
@@ -101,7 +101,7 @@ while True:
             print("Is there any seasonal closure? " + '\033[1m' + color4 + str(json_data["route"]["hasSeasonalClosure"]) + '\033[0m')
             print("Is there any country cross? " + '\033[1m' + color4 + str(json_data["route"]["hasCountryCross"]) + '\033[0m')
             print()
-            print("===============================================================================")
+            print("================================================================================")
         #Unsuccessful route call (error codes)                                                                    #done fixing the output
         elif json_status == 402:
             print(color3 + '\033[1m' + "***Status Code: " + str(json_status) + "; Invalid user inputs for one or both locations.***" + '\033[0m')
