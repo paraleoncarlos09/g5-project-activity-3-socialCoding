@@ -1,3 +1,4 @@
+import sys
 import urllib.parse
 import requests
 from colored import fg                      
@@ -119,3 +120,4 @@ while True:
     else:
         print(color3 + '\033[1m' + "***Invalid input. Input must be a string.***" + '\033[0m')                                                   #output if the inputted values are integer or numeric
         continue
+sys.exit()
