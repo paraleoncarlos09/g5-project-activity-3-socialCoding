@@ -17,13 +17,13 @@ color4 = fg('light_sky_blue_3b')
 main_api = "https://www.mapquestapi.com/directions/v2/route?"
 key = "Kf4MrxBifKdgiInGG6N7bWMA46ACtFPx"
 
-print()
+
 print(color1 + back1 + '\033[1m' + "                               MAP QUEST                                       " + '\033[0m')
 print(color1 + back1 + '\033[1m' + "                              by: GROUP V                                      " + '\033[0m')
 
 while True:
     #User input for the location & destination and validation of inputs.
-    orig = input(color2 + '\033[1m' + "\nStarting Location: " + '\033[0m')                                       #Fix: Should not accept integer or numeric input
+    orig = input(color2 + '\033[1m' + "\nStarting Location: " + '\033[0m')                     #Fix: Should not accept integer or numeric input
     if orig == "quit" or orig == "q":                                                                   #Bold Text: '\033[0m'
         print("\nProgram Terminated.")
         break
